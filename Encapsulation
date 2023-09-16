@@ -1,0 +1,34 @@
+class GoodDog{
+    private int size;
+ //getter for size
+    public int getSize(){
+        return size;
+    }
+ //setter for size
+    public void setSize(int s){
+        size=s;
+    }
+
+    void bark(){
+        if(size>60){
+            System.out.println("Woof woof!");
+        }else if(size>14){
+            System.out.println("Ruff Ruff!");
+        }else{
+            System.out.println("Yip Yip!");
+        }
+    }
+}
+
+public class GoodDogTestDrive{
+    public static void main(String args[]){
+        GoodDog tom=new GoodDog();
+        tom.setSize(75);
+        GoodDog gimmy=new GoodDog();
+        gimmy.setSize(35);
+        System.out.println("tom size: "+tom.getSize());
+        System.out.println("gimmy size: "+gimmy.getSize());
+        tom.bark();
+        gimmy.bark();
+    }
+}
